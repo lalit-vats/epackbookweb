@@ -1,0 +1,51 @@
+.header {
+    color: var(--white);
+
+}
+
+.topHeader {
+    background-color: var(--primery);
+    padding: 10px;
+
+}
+
+.topHeader a {
+    margin-right: 10px;
+    margin-left: 8px;
+    color: var(--white);
+
+}
+
+.mainHeader {
+    background-color: var(--secondery);
+    padding: 15px 0;
+}
+
+.leftSide img {
+    width: 200px;
+}
+
+.rightSide {
+    gap: 15px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.navSelect label {
+    color: white !important;
+    font-size: 16px !important;
+}
+
+.navSelect {
+    width: 80px;
+    padding-bottom: 10px !important;
+}
+
+.rightSide a {
+    color: var(--white);
+}
+
+.iconalign {
+    margin-right: 10px;
+}

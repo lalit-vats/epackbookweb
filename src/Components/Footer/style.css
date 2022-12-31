@@ -1,0 +1,18 @@
+footer {
+    background-color: #012A5E;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+}
+
+footer .MuiCard-root {
+    min-height: 450px;
+    background-color: var(#fff);
+    
+}

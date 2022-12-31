@@ -1,4 +1,5 @@
 import {
+  Button,
   Card,
   CardContent,
   CardHeader,
@@ -12,43 +13,6 @@ import {
 import { Box } from "@mui/system";
 import React, { Fragment } from "react";
 import "./style.css";
-import { BsFacebook } from "react-icons/bs";
-
-const footerCardData = [
-  {
-    header: "WHAT WE DO",
-    body: "ePackBook is a powerfull software to manage relocation business online. ePackBook allows their user to manage all enquiries, Notify survey date & Time, Follow ups reminder, Create and Send Quotations in stylish tamplets, Jobs reminder, Download Reports, Manage customers profile & Their Moves and many more...",
-  },
-  {
-    header: "this is a header",
-    socialMediaIcons: [
-      {
-        icon: <BsFacebook color="red" />,
-        path: "#",
-      },
-      {
-        icon: <BsFacebook color="red" />,
-        path: "#",
-      },
-      {
-        icon: <BsFacebook color="red" />,
-        path: "#",
-      },
-      {
-        icon: <BsFacebook color="red" />,
-        path: "#",
-      },
-    ],
-  },
-  {
-    header: "this is a header",
-    body: "this is a body",
-  },
-  {
-    header: "this is a header",
-    body: "this is a body",
-  },
-];
 
 function SocialMediaIconsJSX(props) {
   if (!props.IconsArr) return null;
@@ -63,15 +27,26 @@ function SocialMediaIconsJSX(props) {
   );
 }
 
-function Footer() {
+const Footer = ({ footerCardData }) => {
   return (
     <footer>
-      <section>
+      <Box sx={{ background: "#012A5E" }}>
+        <Container>
+          <Box className="topFooter">
+            <Typography sx={{ textAlign: "center" }} color="white">
+              Hey! Are You Packers & Movers? We have a solution to manage your
+              business online.
+            </Typography>
+            <Button variant="contained">Sign Up</Button>
+          </Box>
+        </Container>
+      </Box>
+      <section className="CardsWrapper" style={{ margin: "30px 0" }}>
         <Container>
           <Grid container spacing={1}>
             <Grid item xs={12} sm={6} lg={3}>
-              <Card sx={{ backgroundColor: "#f7f7f7" }}>
-                <CardHeader title={"WHAT WE DO"} />
+              <Card className="card">
+                <CardHeader className="cardHeading" title={"WHAT WE DO"} />
                 <Divider />
                 <CardContent>
                   <Typography gutterBottom>
@@ -90,8 +65,8 @@ function Footer() {
             </Grid>
 
             <Grid item xs={12} sm={6} lg={3}>
-              <Card sx={{ backgroundColor: "#f7f7f7" }}>
-                <CardHeader title={"WHAT WE DO"} />
+              <Card className="card">
+                <CardHeader className="cardHeading" title={"WHAT WE DO"} />
                 <Divider />
                 <CardContent>
                   <SocialMediaIconsJSX
@@ -108,8 +83,8 @@ function Footer() {
             </Grid>
 
             <Grid item xs={12} sm={6} lg={3}>
-              <Card sx={{ backgroundColor: "#f7f7f7" }}>
-                <CardHeader title={"WHAT WE DO"} />
+              <Card className="card">
+                <CardHeader className="cardHeading" title={"WHAT WE DO"} />
                 <Divider />
                 <CardContent>
                   <Stack spacing={2}>
@@ -133,8 +108,8 @@ function Footer() {
             </Grid>
 
             <Grid item xs={12} sm={6} lg={3}>
-              <Card>
-                <CardHeader title={"WHAT WE DO"} />
+              <Card className="card">
+                <CardHeader className="cardHeading" title={"WHAT WE DO"} />
                 <Divider />
                 <CardContent>
                   <Typography gutterBottom>
@@ -159,19 +134,16 @@ function Footer() {
           </Grid>
         </Container>
       </section>
-      <Divider sx={{ my: 2, }}color="fff"  />
-      <section>
+      <Divider color="fff" />
+      <section style={{ margin: "16px 0" }}>
         <Container>
-          <Typography sx={{ textAlign: "center" }} color="white">
+          <Typography sx={{ textAlign: "center" }}>
             © EPackBook {new Date().getFullYear()} | All Right Reserved
           </Typography>
         </Container>
       </section>
     </footer>
   );
-}
+};
 
 export default Footer;
-{
-  /* <SocialMediaIconsJSX IconsArr={data.socialMediaIcons} /> */
-}

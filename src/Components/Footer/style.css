@@ -1,14 +1,21 @@
 footer {
-    background-color: #012A5E;
-    min-height: 500px;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
-    position: absolute;
-    bottom: 0;
-    z-index: 0;
-    width: 100%;
+    margin-top: 50px;
+}
+
+footer .topFooter{
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topFooter button{
+    padding: 5px 30px;
+    font-size: 12px;
 }
 
 footer .MuiCard-root {
@@ -16,3 +23,17 @@ footer .MuiCard-root {
     background-color: var(#fff);
     
 }
+.cardHeading span{
+    font-weight: 700 !important;
+    font-size: 18px !important;
+}
+.CardsWrapper .card{
+    background-color: #f3f3f3;
+}
+
+.CardsWrapper a{
+    color: var(--primery) !important;
+    font-weight: 600 !important;
+    font-size: 14px;
+}
+
